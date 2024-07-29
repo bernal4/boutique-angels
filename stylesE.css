@@ -1,0 +1,199 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff; /* Color de fondo del encabezado */
+    padding: 20px 0; /* Espaciado interno superior e inferior */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    height: 150px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 130px; 
+    width: 130px; 
+}
+
+.menu {
+    list-style-type: none; /* Quitamos los puntos de lista del menú principal */
+    display: flex; /* Mostramos los elementos del menú en línea */
+}
+
+.menu li {
+    position: relative; /* Posición relativa para los elementos del menú */
+}
+
+.menu li a {
+    color: #131212; /* Color del texto del menú */
+    text-decoration: none; /* Sin subrayado en los enlaces */
+    padding: 30px 28px; /* Espaciado interno de los elementos del menú */
+    display: block; /* Mostramos los enlaces como bloques */
+    transition: background-color 0.3s; /* Transición suave de color de fondo */
+}
+
+.menu li a:hover {
+    background-color: #C5A44F; /* Color de fondo dorado al pasar el ratón */
+    color: #333; /* Color del texto al pasar el ratón */
+}
+
+.submenu {
+    display: none; /* Ocultamos inicialmente el submenú */
+    position: absolute; /* Posición absoluta para superponer sobre el menú principal */
+    background-color: #fff; /* Color de fondo del submenú */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra */
+    z-index: 1; /* Capa z para mantener el submenú sobre el contenido */
+    padding: 0; /* Quitamos el padding para los elementos del submenú */
+    list-style-type: none; /* Quitamos los puntos de lista del submenú */
+    border-top: 3px solid #C5A44F; /* Borde superior dorado */
+    border-radius: 0 0 5px 5px; /* Bordes redondeados en la parte inferior */
+}
+
+.submenu li {
+    width: 200px; /* Ancho del submenú */
+}
+
+.menu li:hover .submenu {
+    display: block; /* Mostramos el submenú al hacer hover sobre el elemento del menú */
+}
+
+.submenu a {
+    color: #181717; /* Color del texto del submenú */
+    padding: 10px; /* Espaciado interno de los elementos del submenú */
+    text-decoration: none; /* Sin subrayado en los enlaces del submenú */
+    display: block; /* Mostramos los enlaces del submenú como bloques */
+    transition: background-color 0.3s; /* Transición suave de color de fondo */
+}
+
+.submenu a:hover {
+    background-color: #C5A44F; /* Color de fondo dorado al pasar el ratón sobre los enlaces del submenú */
+    color: #333; /* Color del texto al pasar el ratón */
+}
+.button-container {
+    display: flex;
+    flex-direction: column; /* Apila los botones verticalmente */
+    align-items: flex-start; /* Alinea los botones a la izquierda */
+    padding: 20px; /* Opcional: Añade un poco de espacio alrededor del contenedor */
+}
+.btn-iniciar-sesion, .btn-registrarse {
+    width: 129px;
+    height: 30px;
+    padding: 5px 10px;
+    background: #FFFFFF00;
+    color: #000000;
+    border-color: #C5A44F;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 21px;
+    font-family: "Source Sans 3";
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 10px; /* Añade un margen inferior entre los botones */
+    margin-left: 0; /* Asegúrate de que no hay margen izquierdo automático */
+}
+hr {
+    display: block;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    unicode-bidi: isolate;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    border-color: #C5A44F;
+}
+
+.carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 2px solid #C5A44F;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: #C5A44F;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.event-descriptions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.event {
+    background-color: #f9f9f9;
+    border: 2px solid #C5A44F;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 45%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.event h2 {
+    color: #C5A44F;
+}
+
+.event p {
+    color: #555;
+}

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>BOUTIQUE ANGELS</title>
+    <style>
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .imagen-estilo {
+            max-width: 300px;
+            border: 2px solid #C5A44F;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .image-wrapper {
+            text-align: center;
+            margin: 20px;
+        }
+        .imagen-estilo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .full-section {
+            width: 100%;
+            height: 100vh;
+            background: url('imagenes/mesas.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: rgb(0, 0, 0);
+            border-radius: 40%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            z-index: 1000;
+        }
+        .whatsapp-button img {
+            width: 40px;
+            height: 40px;
+        }
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            left: 90px; /* Ajusta la distancia desde el borde derecho si es necesario */
+            background-color: #C5A44F;
+            color: rgb(3, 3, 3);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+        .scroll-to-top:hover {
+            background-color: #a37c33;
+        }
+        .scroll-to-top:before {
+            content: "↑";
+        }
+        /* Estilos para los botones de inicio de sesión y registro */
+        .button-container button {
+            background-color: #C5A44F;
+            color: #080808;
+            border: 2px solid #C5A44F; /* Borde amarillo */
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 5px;
+            font-family: "Source Sans 3";
+        }
+        .button-container button:hover {
+            background-color:  #C5A44F; /* Color de fondo cuando se pasa el ratón */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/3123768448" class="whatsapp-button" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <!-- Botón de flecha hacia arriba -->
+    <button class="scroll-to-top" onclick="scrollToTop()"></button>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="imagenes/logo.png" alt="Logo">
+            </div>
+            <ul class="menu">
+                <li><a href="#Inicio">Inicio</a>
+                    <ul class="submenu">
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#ofrecemos">Ofrecemos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#servicios">Servicios</a>
+                    <ul class="submenu">
+                        <li><a href="./imagenes/sonido/catering/decoracion/decoracion.html">Decoración</a></li>
+                        <li><a href="./imagenes/sonido/sonido.html">Sonido</a></li>
+                        <li><a href="./imagenes/sonido/catering/catering.html">Catering</a></li>
+                        <li><a href="./imagenes/sonido/catering/alquiler/alquiler.html">Alquiler</a></li>
+                    </ul>
+                </li>
+                <li><a href="#eventos">Tipos de Eventos</a>
+                    <ul class="submenu">
+                        <li><a href="#evento1">XV</a></li>
+                        <li><a href="#evento2">Boda</a></li>
+                        <li><a href="#evento3">Baby shower</a></li>
+                        <li><a href="#evento4">Primera comunión</a></li>
+                        <li><a href="#evento5">Prom</a></li>
+                    </ul>
+                </li>
+                <li><a href="./cotizar/cotizar.html">Cotiza</a></li>
+                <div class="button-container">
+                    <button><a href="./inicio/iniciar sesion.html" style="color: white; text-decoration: none;">Iniciar Sesión</a></button>
+                    <button><a href="./inicio/registrarse.html" style="color: white; text-decoration: none;">Registrarse</a></button>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <section class="full-section">
+        <br>
+        <center>
+        <h1></h1>
+        </center>
+    </section>
+    <hr>
+    <section id="nosotros" class="video-section">
+        <center>
+        <h1>NOSOTROS</h1>
+        <p>Somos una empresa con calidad humana, estamos dispuestos a brindar a nuestros clientes un servicio único, <br>
+            personalizado y adaptado a cada ocasión ofreciendo productos altamente competitivos que plasmen momentos <br> 
+            especiales para que sean inolvidables y respondan satisfactoriamente a las necesidades de nuestros clientes.</p>
+            </center>
+            <br>
+        <center> <iframe width="560" height="315" src="https://www.youtube.com/embed/_TAOWy1iDNc?si=4rdasy83S7SYk1oU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+    </section>
+    <section class="content-wrapper" id="ofrecemos">
+        <br>
+        <hr>
+        <center>
+        <h1>OFRECEMOS</h1>
+        <h2 id="evento1">QUINCEAÑOS</h2>
+        <div class="image-container">
+            <p>En Boutique Àngels queremos ofrecerte los mejores servicios para ese día tan Anhelado y Especial. <br>
+            Contamos con todo lo que estas buscando para tu gran día y nos encanta celebrar las mejores fiestas de 15 años.</p>
+            <br>
+            <img src="imagenes/15.png" alt="" class="imagen-estilo">  
+            <img src="imagenes/quince.jpg" alt="" class="imagen-estilo">
+            <img src="imagenes/niña.jpg" alt="" class="imagen-estilo">
+        </div>
+        <hr>
+        <h2 id="evento2">BODAS</h2>
+        <p>Boutique Àngels quiere hacer parte de la boda de tus sueños. Ese momento en que todos te miran con sonrisas <br> 
+        y lágrimas; es uno de los mejores recuerdos que tendrás, por ello, te prestamos nuestros servicios de manera personalizada, <br> 
+        con el fin de hacer realidad lo que siempre quisiste.</p>
+        <br>
+        <img src="imagenes/novios.jpg" alt="" class="imagen-estilo">
+        <hr>
+        <h2>OTROS EVENTOS</h2>
+        <p>Te mostramos otros tipos de eventos que manejamos con una variedad de precios e increibles decoraciones.</p>
+        <div class="image-container">
+            <img class="imagen-estilo" src="imagenes/comu.jpeg" id="evento4" alt="">
+            <p>PRIMERA COMUNIÓN</p> 
+            <br>
+            <img class="imagen-estilo" src="imagenes/baby.jpg" id="evento3" alt="">
+            <p>BABY SHOWER</p>
+            <br>
+            <img class="imagen-estilo" src="imagenes/prom.jpg" id="evento5" alt="">
+            <p>FIESTAS DE PROM</p>
+        </div>
+        <div>
+            <button class="btn-cotiza" id="btn-reserva">Reserva</button>
+        </div>
+        <br>
+    </section>
+    <div class="container" id="form-container" style="display:none;">
+        <button id="btn-cerrar">Cerrar</button>
+        <h1>Formulario de Reserva</h1>
+        <form action="/enviar-reserva" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha de Reserva:</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+            <div class="form-group">
+                <label for="hora">Hora de Reserva:</label>
+                <input type="time" id="hora" name="hora" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo-evento">Tipo de Evento:</label>
+                <select id="tipo-evento" name="tipo_evento" required>
+                    <option value="">Seleccione un tipo de evento</option>
+                    <option value="boda">Boda</option>
+                    <option value="Quinceaños">Quinceaños</option>
+                    <option value="Baby Shower">Baby Shower</option>
+                    <option value="Primera Comunion">Primera Comunion</option>
+                    <option value="Prom">Prom</option>
+                    <option value="otro">otro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="paquete">Paquete:</label>
+                <select id="paquete" name="paquete" required>
+                    <option value="">Seleccione un paquete</option>
+                    <option value="paquete-basico">Paquete Básico</option>
+                    <option value="paquete-avanzado">Paquete Avanzado</option>
+                    <option value="paquete-premium">Paquete Premium</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Servicios:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="servicios" value="catering"> Catering</label>
+                    <label><input type="checkbox" name="servicios" value="decoracion"> Decoración</label>
+                    <label><input type="checkbox" name="servicios" value="sonido"> Sonido</label>
+                    <label><input type="checkbox" name="servicios" value="alquiler"> Alquiler</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit">Enviar Reserva</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("btn-reserva").addEventListener("click", function() {
+            document.getElementById("form-container").style.display = "block";
+        });
+        
+        document.getElementById("btn-cerrar").addEventListener("click", function() {
+            document.getElementById("form-container").style.display = "none";
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+    <hr>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Casa de Eventos</h3>
+                <p>Dirección: Carerra 140a #137-58, Paipa, Colombia</p>
+                <p>Teléfono: +57 3129875682</p>
+                <p>Email: info@casadeeventos.com</p>
+            </div>
+            <div class="footer-column">
+                <h3>Mapa</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345097983!2d144.9537353153159!3d-37.8162793797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf57771e7f4b9e829!2sFederation+Square!5e0!3m2!1sen!2sau!4v1511368576739" allowfullscreen></iframe>
+            </div>
+            <div class="footer-column">
+                <h3>Redes Sociales</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/boutiqueangels.paipa" target="_blank" title="Facebook">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="width: 20px; height: 20px;"></a>
+                    <a href="#" title="Instagram">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 20px; height: 20px;"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 BOUTIQUE ANGELS. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

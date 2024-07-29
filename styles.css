@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; 
+    color: #333;
+}
+
+h1{
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    color: #C5A44F;
+    font-family: 'Playfair Display', serif;
+}
+h2{
+    font-size: 20px;
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    color: #C5A44F;
+    font-family: 'Merriweather', serif;
+}
+#nosotros p, #ofrecemos p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    color: #000000;
+}
+#nosotros, #ofrecemos {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+header {
+    background-color: #ffffff; /* Color de fondo del encabezado */
+    padding: 20px 0; /* Espaciado interno superior e inferior */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    height: 150px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 120px; 
+    width: 120px; 
+}
+
+.menu {
+    list-style-type: none; /* Quitamos los puntos de lista del menú principal */
+    display: flex; /* Mostramos los elementos del menú en línea */
+}
+
+.menu li {
+    position: relative; /* Posición relativa para los elementos del menú */
+}
+
+.menu li a {
+    color: #000000f3; /* Color del texto del menú */
+    text-decoration: none; /* Sin subrayado en los enlaces */
+    padding: 30px 28px; /* Espaciado interno de los elementos del menú */
+    display: block; /* Mostramos los enlaces como bloques */
+    transition: background-color 0.3s; /* Transición suave de color de fondo */
+    font-family: "Source Sans 3";
+}
+
+.menu li a:hover {
+    background-color: #C5A44F; /* Color de fondo dorado al pasar el ratón */
+    color: #111111; /* Color del texto al pasar el ratón */
+}
+
+.submenu {
+    display: none; /* Ocultamos inicialmente el submenú */
+    position: absolute; /* Posición absoluta para superponer sobre el menú principal */
+    background-color: #fff; /* Color de fondo del submenú */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra */
+    z-index: 1; /* Capa z para mantener el submenú sobre el contenido */
+    padding: 0; /* Quitamos el padding para los elementos del submenú */
+    list-style-type: none; /* Quitamos los puntos de lista del submenú */
+    border-top: 3px solid #C5A44F; /* Borde superior dorado */
+    border-radius: 0 0 5px 5px; /* Bordes redondeados en la parte inferior */
+}
+
+.submenu li {
+    width: 200px; /* Ancho del submenú */
+}
+
+.menu li:hover .submenu {
+    display: block; /* Mostramos el submenú al hacer hover sobre el elemento del menú */
+}
+
+.submenu a {
+    color: #181717; /* Color del texto del submenú */
+    padding: 10px; /* Espaciado interno de los elementos del submenú */
+    text-decoration: none; /* Sin subrayado en los enlaces del submenú */
+    display: block; /* Mostramos los enlaces del submenú como bloques */
+    transition: background-color 0.3s; /* Transición suave de color de fondo */
+}
+
+.submenu a:hover {
+    background-color: #C5A44F; /* Color de fondo dorado al pasar el ratón sobre los enlaces del submenú */
+    color: #333; /* Color del texto al pasar el ratón */
+}
+.button-container {
+    display: flex;
+    flex-direction: column; /* Apila los botones verticalmente */
+    align-items: flex-start; /* Alinea los botones a la izquierda */
+    padding: 20px; /* Opcional: Añade un poco de espacio alrededor del contenedor */
+}
+.btn-iniciar-sesion, .btn-registrarse {
+    width: 129px;
+    height: 30px;
+    padding: 5px 10px;
+    background: #FFFFFF00;
+    color: #000000;
+    border-color: #C5A44F;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 21px;
+    font-family: "Source Sans 3";
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 10px; /* Añade un margen inferior entre los botones */
+    margin-left: 0; /* Asegúrate de que no hay margen izquierdo automático */
+}
+hr {
+    display: block;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    unicode-bidi: isolate;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    border-color: #C5A44F;
+}
+.elementor-widget-image img {
+    vertical-align: middle;
+    display: inline-block;
+}
+footer {
+    background-color: #f4f4f4;
+    color: #000000;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.footer-column p, .footer-column a {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #000;
+}
+
+.footer-column iframe {
+    width: 100%;
+    border: none;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #faf5f5;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #999;
+}
+
+/* Wrapper de la imagen para darle forma */
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; /* Esto hace un contenedor cuadrado */
+    overflow: hidden;
+    border-radius: 50%; /* Cambia esto para diferentes formas (50% para círculo) */
+    transition: transform 0.3s ease;
+}
+.image-container {
+    text-align: center; /* Centra la imagen y el texto */
+    margin: 20px; /* Añade un margen alrededor del contenedor */
+}
+
+.image-container img {
+    width: 100%; /* Ajusta el tamaño de la imagen al contenedor */
+    max-width: 300px; /* Establece un tamaño máximo para la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.image-container p {
+    margin-top: 10px; /* Añade un margen superior para separar el texto de la imagen */
+    font-size: 12px; /* Tamaño de la fuente del texto */
+    color: #333; /* Color del texto */
+}
+
+.video-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.video-section iframe {
+    width: 80%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 8px;
+}
+/* Botón Cotiza */
+.button-container {
+    text-align: right; /* Alinea el botón a la izquierda */
+    margin-top: 20px;
+}
+
+.btn-cotiza {
+    background-color: #C5A44F;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-cotiza:hover {
+    background-color: #b89441;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-cotiza:active {
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card-footer {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #000000;
+}
+/*Formulario Reserva*/
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #f7f6f5;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #C5A44F;
+    border-radius: 4px;
+}
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #C5A44F;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.form-group button:hover {
+    background-color: #C5A44F;
+}
+.btn-cerrar{
+    background-color: #C5A44F;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

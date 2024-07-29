@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa de Eventos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+            <nav>
+                <div class="logo">
+                    <img src="imagenes/logo.png" alt="Logo">
+                </div>
+                <ul class="menu">
+                    <li><a href="#Inicio">Inicio</a>
+                    <ul class="submenu">
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#ofrecemos">Ofrecemos </a></li>
+    
+                    
+                    </ul>
+                </li>
+                    <li><a href="#servicios">Servicios</a>
+                        <ul class="submenu">
+                            <li><a href="#servicio1">Decoración</a></li>
+                            <li><a href="#servicio2">Sonido</a></li>
+                            <li><a href="#servicio3">Alquiler</a></li>
+                            <li><a href="#servicio4">Alquiler</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#eventos">Tipos de Eventos</a>
+                        <ul class="submenu">
+                            <li><a href="#evento1">XV</a></li>
+                            <li><a href="#evento2">Boda</a></li>
+                            <li><a href="#evento3">Baby shower</a></li>
+                            <li><a href="#evento4">Primera comunión</a></li>
+                            <li><a href="#evento5">Prom</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#cotiza">Cotiza</a></li>
+                    <div class="button-container">
+                        <button class="btn-iniciar-sesion">Iniciar Sesión</button>
+                        <button class="btn-registrarse">Registrarse</button>
+                    </div>
+                 </ul>
+            </nav>
+    <hr>
+        <h1>Casa de Eventos</h1>
+    </header>
+
+    <section class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="imagenes/quince.jpg" alt="Quince años">
+                <div class="carousel-caption">Quince Años</div>
+            </div>
+            <div class="carousel-slide">
+                <img src="imagenes/boda.jpg" alt="Boda">
+                <div class="carousel-caption">Boda</div>
+            </div>
+            <div class="carousel-slide">
+                <img src="imagenes/baby.jpg" alt="Baby Shower">
+                <div class="carousel-caption">Baby Shower</div>
+            </div>
+            <div class="carousel-slide">
+                <img src="imagenes/prom.jpg" alt="Prom">
+                <div class="carousel-caption">Prom</div>
+            </div>
+            <div class="carousel-slide">
+                <img src="imagenes/comu.jpeg" alt="Primera Comunión">
+                <div class="carousel-caption">Primera Comunión</div>
+            </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </section>
+
+    <section class="event-descriptions">
+        <div class="event">
+            <h2>Quince Años</h2>
+            <p>Celebración especial para festejar los 15 años de vida, con música, baile y una hermosa fiesta.</p>
+        </div>
+        <div class="event">
+            <h2>Boda</h2>
+            <p>Un evento inolvidable para celebrar la unión de dos personas que se aman, con ceremonia y recepción.</p>
+        </div>
+        <div class="event">
+            <h2>Baby Shower</h2>
+            <p>Una celebración anticipada del nacimiento de un bebé, con juegos, regalos y muchas emociones.</p>
+        </div>
+        <div class="event">
+            <h2>Prom</h2>
+            <p>La fiesta de graduación que marca el fin de una etapa y el inicio de nuevas aventuras.</p>
+        </div>
+        <div class="event">
+            <h2>Primera Comunión</h2>
+            <p>Un evento religioso significativo, conmemorando la primera participación de un niño en la Eucaristía.</p>
+        </div>
+    </section>
+
+    <script src="scripts.js">
+        let currentIndex = 0;
+
+function showSlides() {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const totalSlides = slides.length;
+
+    slides.forEach((slide, index) => {
+        slide.style.display = 'none';
+    });
+
+    currentIndex++;
+    if (currentIndex > totalSlides) { currentIndex = 1 }
+
+    slides[currentIndex - 1].style.display = 'block';
+    setTimeout(showSlides, 3000); // Cambia la imagen cada 3 segundos
+}
+
+document.querySelector('.prev').addEventListener('click', () => {
+    currentIndex -= 2;
+    if (currentIndex < 0) { currentIndex = slides.length - 1; }
+    showSlides();
+});
+
+document.querySelector('.next').addEventListener('click', showSlides);
+
+showSlides();
+
+    </script>
+</body>
+</html>
